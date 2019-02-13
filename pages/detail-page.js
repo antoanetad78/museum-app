@@ -16,6 +16,12 @@ function submitComment() {
     comment.appendChild(h3);
     comment.appendChild(p);
     console.log(comment);
-    
+    const commentSection = document.getElementById('comments');
+    console.log(commentSection);
+    commentSection.appendChild(comment);
+
+    textArea.value = null;
+    inputField.value = null;
+
     
 }
