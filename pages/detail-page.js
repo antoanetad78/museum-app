@@ -26,10 +26,22 @@ function doesNotPassAllValidation(name, msg) {
     return false;
 }
 
+function changeFirstLetterToUppercase(nameProvided) {
+    let big = nameProvided.substring(0,1).toUpperCase()+nameProvided.substring(1).toLowerCase();
+    console.log(big)
+    return big;
+}
+
 function submitComment() {
     const inputField = document.getElementById('name');
-    const name = inputField.value;
     
+    let name = inputField.value;
+
+    name = changeFirstLetterToUppercase(name);
+
+    console.log(name);
+    
+
     const textArea = document.getElementById('msg');
     const msg = textArea.value;
 
